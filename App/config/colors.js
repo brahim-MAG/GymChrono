@@ -1,0 +1,17 @@
+export default {
+  primary: "#2f3640",
+  secondary: "#273c75",
+  blueNights: "#353b48",
+  mazarineBlue: "#192a56",
+  naval: "#40739e",
+  seabrook: "#487eb0",
+  hintOfPensive: "#dcdde1",
+  lynxWhite: "#f5f6fa",
+  bleuBerrySoda: "#7f8fa6",
+  danger: "#e84118",
+  gold: "#fbc531",
+  blodyRed: "#c23616",
+  royalGreen: "#44bd32",
+  white: "#fff",
+  black: "#000",
+};
