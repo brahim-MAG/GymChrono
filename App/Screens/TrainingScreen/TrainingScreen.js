@@ -1,7 +1,9 @@
-import React from "react";
+import React/* , { useEffect } */ from "react";
 import { View, StyleSheet } from "react-native";
-import AppButton from "../../components/AppButton";
 import { useNavigation } from "@react-navigation/native";
+
+//import { getAllExercices } from "../../database/exercice";
+import AppButton from "../../components/AppButton";
 import navigation from "../../config/navigation";
 import AppScreen from "../../components/AppScreen";
 
@@ -10,6 +12,11 @@ function TrainingScreen() {
   const handleAddTraining = () => {
     navigate.navigate(navigation.ADD_TRAINING);
   };
+
+ /*  useEffect(() => {
+    getAllExercices();
+  }, []); */
+
   return (
     <AppScreen>
       <View style={styles.container}>

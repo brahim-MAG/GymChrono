@@ -8,6 +8,7 @@ import ExerciceCard from "../../components/ExerciceCard";
 import AppButton from "../../components/AppButton";
 import colors from "../../config/colors";
 import navigation from "../../config/navigation";
+import { addExercice, getAllExercices } from "../../database/exercice";
 
 function AddTrainingScreen() {
   const navigate = useNavigation();
@@ -18,6 +19,13 @@ function AddTrainingScreen() {
   };
   const handleAddExercice = (newExercice) => {
     setExecices([...exercices, newExercice]);
+  };
+
+  const handleAddExercices = async () => {
+    exercices.forEach((exercie) =>
+      addExercice(exercie.typeExercice, exercie.poid, exercie.repetition)
+    );
+    //navigate.navigate(navigation.TARINING);
   };
 
   return (
@@ -42,9 +50,7 @@ function AddTrainingScreen() {
                 <AppButton
                   color={colors.royalGreen}
                   title="Enregistrer"
-                  onClick={() => {
-                    //
-                  }}
+                  onClick={() => handleAddExercices()}
                 />
               </View>
               <View style={styles.btn}>
